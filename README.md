@@ -2,7 +2,7 @@
 
 This is the OmniAuth strategy for authenticating to Naver. To
 use it, you'll need to sign up for an OAuth2 Application ID and Secret
-on the [Naver](http://developer.naver.com/wiki/pages/NaverLogin).
+on the [Naver](https://developers.naver.com/docs/login/overview).
 
 ## Installation
 
