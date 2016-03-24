@@ -15,7 +15,7 @@ module OmniAuth
 
       info do
         {
-          'name' => raw_properties['nickname'],
+          'name' => raw_properties['name'],
           'email' => raw_properties['email'],
           'gender' => gender,
           'image' => image,
@@ -25,7 +25,6 @@ module OmniAuth
       extra do
         {:raw_info => raw_info}
       end
-
 
       private
 
