@@ -48,6 +48,10 @@ module OmniAuth
 
       def raw_properties
         @raw_properties ||= raw_info['data']['response']
+
+        p "raw_properties: #{@raw_properties}"
+
+        @raw_properties
       end
     end
   end
