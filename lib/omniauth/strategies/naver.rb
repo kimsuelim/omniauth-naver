@@ -47,7 +47,7 @@ module OmniAuth
       end
 
       def raw_properties
-        @raw_properties ||= raw_info['data']['response']
+        @raw_properties ||= raw_info['response']
       end
     end
   end
