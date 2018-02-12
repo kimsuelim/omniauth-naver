@@ -12,7 +12,7 @@ module OmniAuth
                               authorize_url: 'https://nid.naver.com/oauth2.0/authorize',
                               token_url: 'https://nid.naver.com/oauth2.0/token'
 
-      uid { raw_properties['enc_id'].to_s }
+      uid { raw_properties['id'].to_s }
 
       info do
         {
