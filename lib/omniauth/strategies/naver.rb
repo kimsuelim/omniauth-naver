@@ -17,7 +17,6 @@ module OmniAuth
         {
           'name' => raw_properties['name'],
           'email' => raw_properties['email'],
-          'gender' => gender,
           'image' => image,
         }
       end
@@ -27,11 +26,6 @@ module OmniAuth
       end
 
       private
-
-      def gender
-        return 'male' if raw_properties['gender'].include? 'M'
-        return 'female' if raw_properties['gender'].include? 'F'
-      end
 
       def image
         return raw_properties['profile_image'].sub('?type=s80', '') unless raw_properties['profile_image'].include? 'nodata_33x33.gif'
