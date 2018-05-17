@@ -19,6 +19,7 @@ module OmniAuth
           'email' => raw_properties['email'],
           'gender' => gender,
           'image' => image,
+          'nickname' => raw_properties['nickname']
         }
       end
 
@@ -29,20 +30,22 @@ module OmniAuth
       private
 
       def gender
+        return if raw_properties['gender'].nil?
         return 'male' if raw_properties['gender'].include? 'M'
         return 'female' if raw_properties['gender'].include? 'F'
       end
 
       def image
+        return if raw_properties['profile_image'].nil?
         return raw_properties['profile_image'].sub('?type=s80', '') unless raw_properties['profile_image'].include? 'nodata_33x33.gif'
       end
 
       def raw_info
-        @raw_info ||= access_token.get('https://apis.naver.com/nidlogin/nid/getUserProfile.json').parsed
+        @raw_info ||= access_token.get('https://openapi.naver.com/v1/nid/me').parsed
       end
 
       def raw_properties
-        @raw_properties ||= raw_info['data']['response']
+        @raw_properties ||= raw_info['response']
       end
     end
   end
