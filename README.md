@@ -34,38 +34,34 @@ Here's an example *Auth Hash* available in `request.env['omniauth.auth']`:
 
 ```ruby
 {
-  "provider"=>"naver",
-  "uid"=>"86744e27d4bfdb3cddb478293d295cf783ce9ed41f0ad7687bac26e97a1ed1b4",
-  "info"=>{
-    "name"=>"홍길동",
-    "email"=>"foobar@naver.com",
-    "gender"=>"male",
-    "image"=>"https://phinf.pstatic.net/contactthumb/52/2014/8/4/kimsuerim_1407162661934.jpg"
+  :provider=>"naver",
+  :uid=>"48436401",
+  :info=>{
+    :name=>"홍길동",
+    :email=>"foobar@naver.com",
+    :gender=>"male",
+    :image=>"https://phinf.pstatic.net/contactthumb/52/2014/8/4/kimsuerim_1407162661934.jpg",
+    :nickname=>"길동"
   },
-  "credentials"=>{
-    "token"=>"AAAAOaaPwFPh1sKav5f5XBbRNfMmqudjxdGsVJQCJdRXKWmWmxAgXwlk29365tU1S4j3oXjG3HpnGG4w+CoJ+gg5eDA=",
-    "refresh_token"=>"kgA4WSgY8h5ZWYFgGxpd0jjGcPTGqf1vUdGq2nj7rfupHMUxUa9adXJhbddMzadB1X9djhfCbBisZGMUsisCp4XuPMRjiiz4yTSG93y3ziiQerTdOUJKuW6VVR5FQLHxj87y",
-    "expires_at"=>1455173853,
-    "expires"=>true
+  :credentials=>{
+    :token=>"AAAAObBDnBitK5i1qRDH4S2OUFvBMMsxWURxpLPNPhQyIyb7bIfH/dUqf1T3e5a5A87X6SntI74aUVIMPupBqKPYB3s=",
+    :refresh_token=>"zdaiiVqKazKWlunUlTbgqjGs0LujvvWjNipKMQSXRQipVFJ5PT0TjNTaq1Yj3oRkaCAUAtMAxHipX2qqzdRNxDoetN7h1Z68YICNujmBjdcZ8aT93sNqxMKXwBgsKW6LPlez",
+    :expires_at=>1526543399,
+    :expires=>true
   },
-  "extra"=>{
-    "raw_info"=>{
-      "data"=>{
-        "result"=>{
-          "resultcode"=>"00",
-          "message"=>"success"
-        },
-        "response"=>{
-          "email"=>"foobar@naver.com",
-          "nickname"=>"foobar",
-          "enc_id"=>"86744e27d4bfdb3cddb478293d295cf783ce9ed41f0ad7687bac26e97a1ed1b4",
-          "profile_image"=>"https://phinf.pstatic.net/contactthumb/52/2014/8/4/kimsuerim_1407162661934.jpg?type=s80",
-          "age"=>"30-39",
-          "gender"=>"M",
-          "id"=>"48407261",
-          "name"=>"홍길동",
-          "birthday"=>"01-08"
-        }
+  :extra=>{
+    :raw_info=>{
+      :resultcode=>"00",
+      :message=>"success",
+      :response=>{
+        :id=>"48436401",
+        :nickname=>"길동",
+        :profile_image=>"https://phinf.pstatic.net/contactthumb/52/2014/8/4/kimsuerim_1407162661934.jpg",
+        :age=>"30-39",
+        :gender=>"M",
+        :email=>"foobar@naver.com",
+        :name=>"홍길동",
+        :birthday=>"01-08"
       }
     }
   }
